@@ -1,0 +1,175 @@
+{
+  "id": "com.gpro.app",
+  "name": "GPro - Hub Pessoal e Profissional",
+  "short_name": "GPro",
+  "description": "Centralize a gestão da sua vida empresarial, profissional e pessoal em um único aplicativo multifuncional.",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay"],
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "any",
+  "scope": "/",
+  "scope_extensions": [
+    {
+      "origin": "https://gpro.app"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.gpro.app",
+      "id": "com.gpro.app"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard do GPro"
+    },
+    {
+      "src": "/screenshots/tasks.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Gestão de Tarefas"
+    },
+    {
+      "src": "/screenshots/calendar.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Calendário"
+    },
+    {
+      "src": "/screenshots/mobile-dashboard.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Dashboard Mobile"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/open-file",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "application/vnd.ms-excel": [".xls", ".xlsx"],
+        "application/msword": [".doc", ".docx"]
+      }
+    }
+  ],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+gpro",
+      "url": "/protocol?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": ["image/*", "application/pdf"]
+        }
+      ]
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Acesse o Dashboard",
+      "url": "/",
+      "icons": [{ "src": "/icons/shortcut-dashboard.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Tarefas Pessoais",
+      "short_name": "Tarefas",
+      "description": "Gerencie suas tarefas pessoais",
+      "url": "/personal/tasks",
+      "icons": [{ "src": "/icons/shortcut-tasks.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Calendário",
+      "short_name": "Calendário",
+      "description": "Acesse seu calendário",
+      "url": "/calendar",
+      "icons": [{ "src": "/icons/shortcut-calendar.png", "sizes": "96x96" }]
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "categories": ["productivity", "business", "finance", "lifestyle"]
+}

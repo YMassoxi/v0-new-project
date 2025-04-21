@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPro - Hub Pessoal e Profissional</title>
+  <meta name="description" content="Centralize a gestão da sua vida empresarial, profissional e pessoal">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon-512x512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="/icon-192x192.png">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="GPro">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .icon {
+      width: 128px;
+      height: 128px;
+      margin: 0 auto 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/icon-512x512.png" alt="GPro Logo" class="icon">
+    <h1>GPro</h1>
+    <p>Hub Pessoal e Profissional</p>
+    <p>Centralize a gestão da sua vida empresarial, profissional e pessoal em um único aplicativo multifuncional.</p>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registrado com sucesso:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Erro ao registrar Service Worker:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

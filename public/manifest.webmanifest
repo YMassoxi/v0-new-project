@@ -1,0 +1,67 @@
+{
+  "id": "com.gpro.app",
+  "name": "GPro - Hub Pessoal e Profissional",
+  "short_name": "GPro",
+  "description": "Centralize a gestão da sua vida empresarial, profissional e pessoal em um único aplicativo multifuncional.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "any",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard do GPro"
+    },
+    {
+      "src": "/screenshots/mobile-dashboard.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Dashboard Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Acesse o Dashboard",
+      "url": "/"
+    },
+    {
+      "name": "Tarefas Pessoais",
+      "short_name": "Tarefas",
+      "description": "Gerencie suas tarefas pessoais",
+      "url": "/personal/tasks"
+    },
+    {
+      "name": "Calendário",
+      "short_name": "Calendário",
+      "description": "Acesse seu calendário",
+      "url": "/calendar"
+    }
+  ],
+  "categories": ["productivity", "business", "finance", "lifestyle"]
+}
